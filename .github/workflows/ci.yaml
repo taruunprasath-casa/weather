@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  build_and_lint:
+  build_and_test:
     runs-on: ubuntu-latest
 
     steps:
@@ -33,7 +33,7 @@ jobs:
           path: dist
 
   deploy:
-    needs: build_and_lint
+    needs: build_and_test
     runs-on: ubuntu-latest
 
     steps:
